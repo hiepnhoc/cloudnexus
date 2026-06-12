@@ -4,3 +4,11 @@
 node_modules
 dist
 .cache
+.idea/
+*.iml
+*.log
+.DS_Store
+cloudnexus-*.png
+services-*.png
+contact-*.png
+about-*.png
