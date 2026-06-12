@@ -1,4 +1,4 @@
-# Production Deployment TODO
+### Production Deployment TODO
 
 File này ghi lại các việc cần hoàn thiện trước khi deploy website lên production.
 
