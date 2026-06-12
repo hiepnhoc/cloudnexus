@@ -16,6 +16,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
+section[id] { scroll-margin-top: 116px; }
 body {
   margin: 0;
   color: var(--text);
@@ -254,7 +255,7 @@ button, input, select, textarea { font: inherit; }
 
 .capability-system {
   display: grid;
-  grid-template-columns: 1.05fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 16px;
 }
 .capability-layer {
@@ -266,11 +267,16 @@ button, input, select, textarea { font: inherit; }
     linear-gradient(180deg, rgba(255,255,255,.075), rgba(255,255,255,.035));
 }
 .capability-layer.foundation,
+.capability-layer.security-governance,
 .capability-layer.data-ai {
-  grid-column: span 1;
   background:
     radial-gradient(circle at 20% 0%, rgba(255,153,0,.22), transparent 38%),
     linear-gradient(180deg, rgba(255,255,255,.09), rgba(255,255,255,.035));
+}
+.capability-layer.security-governance {
+  background:
+    radial-gradient(circle at 20% 0%, rgba(112,215,255,.18), transparent 40%),
+    linear-gradient(180deg, rgba(255,255,255,.085), rgba(255,255,255,.035));
 }
 .capability-layer span {
   color: var(--amber);
@@ -519,8 +525,12 @@ button, input, select, textarea { font: inherit; }
   .architecture-header strong { font-size: 22px; }
   .architecture-core { padding: 18px; border-radius: 20px; }
   .architecture-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
-  .architecture-grid div { min-height: 104px; padding: 14px; }
+  .architecture-grid div { min-height: auto; padding: 14px; }
+  .architecture-grid small { display: none; }
   .architecture-grid b { margin-top: 10px; }
+  .architecture-status { padding: 14px 16px; border-radius: 20px; }
+  .status-row b { font-size: 20px; }
+  .status-row small { font-size: 12px; }
   .visual-card-main { left: 20px; right: 20px; top: 26px; padding: 18px; }
   .visual-card strong { font-size: 21px; }
   .orbit { inset: 118px 34px 76px; }

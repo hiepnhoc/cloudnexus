@@ -65,7 +65,7 @@
           </div>
           <div class="architecture-grid" aria-label="Cloud capabilities">
             <div><span>01</span><b>Migration</b><small>Workload waves</small></div>
-            <div><span>02</span><b>SecOps</b><small>Guardrails</small></div>
+            <div><span>02</span><b>Govern</b><small>Security baseline</small></div>
             <div><span>03</span><b>FinOps</b><small>Cost control</small></div>
             <div><span>04</span><b>GenAI</b><small>Data foundation</small></div>
           </div>
@@ -112,7 +112,8 @@
       <div class="capability-system reveal">
         <article class="capability-layer foundation"><span>Foundation Layer</span><h3>Thiết kế nền tảng cloud an toàn từ ngày đầu.</h3><ul><li>Landing Zone</li><li>AWS Organizations</li><li>Account strategy</li><li>IAM / Network / Logging baseline</li></ul></article>
         <article class="capability-layer"><span>Migration Layer</span><h3>Di chuyển workload theo wave, giảm rủi ro cutover.</h3><ul><li>Assessment</li><li>Wave planning</li><li>Application Migration</li><li>Rollback plan</li></ul></article>
-        <article class="capability-layer"><span>Operate Layer</span><h3>Vận hành bằng playbook, observability và response cadence.</h3><ul><li>Monitoring</li><li>Incident response</li><li>Backup / DR</li><li>Managed CloudOps</li></ul></article>
+        <article class="capability-layer security-governance"><span>Security & Governance Layer</span><h3>Thiết lập guardrails, audit và compliance readiness.</h3><ul><li>IAM / least privilege</li><li>Security logging</li><li>Policy guardrails</li><li>Backup / DR baseline</li></ul></article>
+        <article class="capability-layer"><span>Operate Layer</span><h3>Vận hành bằng playbook, observability và response cadence.</h3><ul><li>Monitoring</li><li>Incident response</li><li>Patch management</li><li>Managed CloudOps</li></ul></article>
         <article class="capability-layer"><span>Optimize Layer</span><h3>Kiểm soát chi phí và rủi ro bằng review định kỳ.</h3><ul><li>FinOps</li><li>Rightsizing</li><li>Savings Plans advisory</li><li>Well-Architected Review</li></ul></article>
         <article class="capability-layer data-ai"><span>Data & AI Layer</span><h3>Sẵn sàng cho analytics, automation và GenAI trên AWS.</h3><ul><li>Data lake</li><li>Analytics pipeline</li><li>Amazon Bedrock readiness</li><li>Search / chatbot / automation</li></ul></article>
       </div>
@@ -150,13 +151,13 @@
 
     <section id="stories" class="section stories">
       <div class="section-heading split reveal">
-        <div><p class="eyebrow dark"><span></span> Customer outcomes</p><h2>Kết quả kinh doanh từ các engagement trên AWS.</h2></div>
-        <p>Các blueprint dưới đây thể hiện cách CloudNexus tiếp cận migration, security, FinOps và GenAI bằng outcome có thể đo lường khi có dữ liệu dự án thực tế.</p>
+        <div><p class="eyebrow dark"><span></span> Kết quả dự án</p><h2>Kết quả kinh doanh từ các lộ trình triển khai trên AWS.</h2></div>
+        <p>Các mô hình dưới đây thể hiện cách CloudNexus tiếp cận migration, security, FinOps và GenAI bằng outcome có thể đo lường khi có dữ liệu dự án thực tế.</p>
       </div>
       <div class="story-grid">
-        <article class="story-card reveal"><small>Representative engagement · Retail</small><h3>Cải thiện product discovery bằng GenAI search</h3><p><b>Goal:</b> giảm thao tác tìm kiếm và tagging thủ công. <b>Approach:</b> Amazon Bedrock, OpenSearch, Lambda và S3. <b>Outcome:</b> blueprint cho discovery nhanh hơn, metric xác nhận theo dự án thực tế.</p></article>
-        <article class="story-card reveal"><small>Anonymized blueprint · Manufacturing</small><h3>Tăng resilience bằng backup và disaster recovery</h3><p><b>Goal:</b> giảm rủi ro downtime cho workload vận hành. <b>Approach:</b> DR design, runbook, monitoring và recovery test. <b>Outcome:</b> roadmap RTO/RPO rõ ràng trước khi go-live.</p></article>
-        <article class="story-card reveal"><small>Representative engagement · SaaS</small><h3>Migration theo wave cho nền tảng tăng trưởng nhanh</h3><p><b>Goal:</b> scale ổn định và release an toàn hơn. <b>Approach:</b> landing zone, container, CI/CD và observability. <b>Outcome:</b> giảm rủi ro cutover, tăng visibility vận hành.</p></article>
+        <article class="story-card reveal"><small>Mô hình triển khai · Retail</small><h3>Cải thiện product discovery bằng GenAI search</h3><p><b>Mục tiêu:</b> giảm thao tác tìm kiếm và tagging thủ công. <b>Cách tiếp cận:</b> Amazon Bedrock, OpenSearch, Lambda và S3. <b>Kết quả cần đo:</b> discovery nhanh hơn, metric xác nhận theo dự án thực tế.</p></article>
+        <article class="story-card reveal"><small>Câu chuyện ẩn danh · Manufacturing</small><h3>Tăng resilience bằng backup và disaster recovery</h3><p><b>Mục tiêu:</b> giảm rủi ro downtime cho workload vận hành. <b>Cách tiếp cận:</b> DR design, runbook, monitoring và recovery test. <b>Kết quả cần đo:</b> roadmap RTO/RPO rõ ràng trước khi go-live.</p></article>
+        <article class="story-card reveal"><small>Mô hình triển khai · SaaS</small><h3>Migration theo wave cho nền tảng tăng trưởng nhanh</h3><p><b>Mục tiêu:</b> scale ổn định và release an toàn hơn. <b>Cách tiếp cận:</b> landing zone, container, CI/CD và observability. <b>Kết quả cần đo:</b> giảm rủi ro cutover, tăng visibility vận hành.</p></article>
       </div>
     </section>
 
@@ -201,7 +202,7 @@
           <h2>Sẵn sàng hiện đại hóa nền tảng AWS?</h2>
           <p>Trao đổi với chuyên gia cloud để nhận đánh giá ban đầu về hạ tầng, chi phí và lộ trình AWS phù hợp.</p>
         </div>
-        <form class="contact-form reveal">
+        <form class="contact-form reveal" data-contact-form data-recipient="contact@cloudnexus.vn">
           <label>Họ tên<input type="text" name="name" placeholder="Nguyễn Văn A"></label>
           <label>Email<input type="email" name="email" placeholder="you@company.com"></label>
           <label>Công ty<input type="text" name="company" placeholder="Tên công ty"></label>

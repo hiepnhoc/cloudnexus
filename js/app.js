@@ -59,10 +59,26 @@ window.addEventListener('scroll', () => {
   header?.classList.toggle('is-scrolled', window.scrollY > 24);
 }, { passive: true });
 
-document.querySelector('.contact-form')?.addEventListener('submit', (event) => {
+document.querySelectorAll('[data-contact-form]').forEach((form) => form.addEventListener('submit', (event) => {
   event.preventDefault();
-  const button = event.currentTarget.querySelector('button');
+  const form = event.currentTarget;
+  const data = new FormData(form);
+  const recipient = form.dataset.recipient || 'contact@cloudnexus.vn';
+  const subject = encodeURIComponent(`AWS assessment request - ${data.get('company') || data.get('name') || 'CloudNexus website'}`);
+  const body = encodeURIComponent([
+    `Họ tên: ${data.get('name') || ''}`,
+    `Email: ${data.get('email') || ''}`,
+    `Công ty: ${data.get('company') || ''}`,
+    `Số điện thoại: ${data.get('phone') || ''}`,
+    `Nhu cầu: ${data.get('service') || ''}`,
+    `Quy mô workload: ${data.get('size') || ''}`,
+    '',
+    `Message:`,
+    data.get('message') || '',
+  ].join('\n'));
+  const button = form.querySelector('button');
   const original = button.textContent;
-  button.textContent = 'Đã ghi nhận yêu cầu';
+  button.textContent = 'Đang mở email...';
+  window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
   setTimeout(() => { button.textContent = original; }, 2200);
-});
+}));
