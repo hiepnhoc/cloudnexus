@@ -389,7 +389,8 @@ button, input, select, textarea { font: inherit; }
 .site-footer small { display: block; max-width: 680px; margin-top: 10px; color: rgba(255,255,255,.45); font-size: 12px; }
 .site-footer nav { display: flex; gap: 18px; }
 
-.reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.reveal,
+.reveal-enabled .reveal,
 .reveal.is-visible { opacity: 1; transform: none; }
 .hero .reveal { opacity: 1; transform: none; }
 
